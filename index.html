@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <style>
+        body{
+            background-color: #2f3241;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            margin: 0;
+            justify-content: center;
+            text-align: center;
+            align-self: center;
+            
+        }
+        #central{
+            background-color: #47676f;
+            margin-top: 10%;
+        }
+        #first_name{
+            color: #fff;
+        }
+        #url1, #url2, #localhost{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="central">
+        <h1>WebView</h1>
+        <div class="row">
+            <form class="col s12" onsubmit="acao()">
+              <div class="row">
+                <label>Modo de Navegação</label>
+                <select class="browser-default" id="mode">
+                    <option value="" disabled selected>Escolha uma Opção</option>
+                    <option value="localhost">Localhost</option>
+                    <option value="url">Url</option>
+                </select>
+              </div>
+              <div class="row" id="localhost">
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate">
+                  <label for="first_name">Porta</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="submit" value="Entrar" class="waves-effect waves-light btn-small">
+                </div>
+              </div>
+              <div class="row" id="url1">
+                <div class="input-field col s12">
+                  <input id="password" type="url" class="validate">
+                  <label for="password">Url</label>
+                </div>
+              </div>
+              <div class="row" id="url2">
+                <div class="input-field col s6">
+                    <input type="submit" value="Entrar" class="waves-effect waves-light btn-small">
+                </div>
+              </div>
+              
+            </form>
+          </div>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/materialize.min.js"></script>
+</body>
+</html>
